@@ -5,14 +5,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_weight="3"
+            android:background="#fff"
+            app:srcCompat="@drawable/smartsystem">
+
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="vertical"
+            android:layout_weight="4.5"
+            android:background="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:textColor= "#00a3cc"
+                    android:fontFamily="@font/adamina"
+                    android:text="Date:"
+                    android:textAlignment="viewStart"
+                    android:textSize="30dp"></TextView>
+
+                <TextView
+                    android:id="@+id/hour_time"
+                    android:textColor= "#00a3cc"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/adamina"
+                    android:text="Hour:"
+                    android:textAlignment="viewStart"
+                    android:textSize="30dp"></TextView>
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:textColor= "#00a3cc"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/adamina"
+                    android:text="Temperature:"
+                    android:textAlignment="viewStart"
+                    android:textSize="30dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#fff">
+                <ImageView
+                    android:id="@+id/analysis_data"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:layout_gravity="center_vertical|center"
+                    app:srcCompat="@drawable/growth_chart">
+                </ImageView>
+
+                <Button
+                    android:id="@+id/analysis_data_but"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#fff"
+                    android:fontFamily="@font/abhaya_libre_semibold"
+                    android:text="History data"
+                    android:textSize="36sp"></Button>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/log_out_but"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="#33cccc"
+            android:fontFamily="@font/abhaya_libre_semibold"
+            android:text="Log out"
+            android:textSize="30sp"
+            android:textStyle="bold"></Button>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
